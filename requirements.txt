@@ -1,0 +1,6 @@
+# Dependencies of the reference implementation.
+# Versions will be pinned in the released package.
+numpy
+scipy
+pandas
+matplotlib
