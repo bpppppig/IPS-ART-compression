@@ -7,7 +7,7 @@ data-format specification, and the reproduction map only.
 
 ## What is IPS
 
-IPS is a cycle-structured codec for invasive arterial pressure (ART) waveforms.
+IPS is a cycle-structured codec for invasive arterial blood pressure (ABP) waveforms.
 Each cardiac cycle is represented by a small set of clinically defined anchors
 (two diastolic troughs and the systolic peak, plus the dicrotic notch and the
 post-notch diastolic peak when detected) together with supplementary points
@@ -22,15 +22,23 @@ See `INTRODUCTION.md` for the problem statement and the three contributions.
     src/ips/          core library (interfaces only in this snapshot)
     scripts/          command-line entry points used in the paper
     docs/             data format, bitstream layout, reproduction map
+    figures/          reference figures (paper and supplementary)
     data/             data schema; no measurements are redistributed here
     tests/            smoke tests
 
 ## Data
 
-The paper uses 105 invasive ART records from a public surgical vital-sign
+The paper uses 105 invasive ABP records from a public surgical vital-sign
 database, segmented into 1,518,283 cardiac cycles. The source waveforms are not
 redistributed; only the processed per-cycle tables will be released. The schema
 is specified in `docs/data_format.md`.
+
+## Figures
+
+`figures/paper/` contains the four figures of the manuscript as vector PDFs;
+`figures/supplementary/` contains additional analysis plots (measured-bit-rate
+rate–distortion, method comparison, anchor ablation, bend-point distribution).
+`figures/README.md` maps each file to the analysis script that produces it.
 
 ## Quick start
 
